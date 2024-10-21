@@ -6,5 +6,4 @@ from django.http import HttpResponse
 from django.template import loader
 
 def alltasks(request):
-    return render(request, "core/alltasks.html")
-
+    return HttpResponse("Hello, world. You're at the polls index.")
