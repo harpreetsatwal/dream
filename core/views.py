@@ -31,3 +31,11 @@ def jobs(request):
         "current_job": current_job,
     }
     return HttpResponse(template.render(context, request))
+
+def login(request):
+    current_job = Job.objects.filter(done=False,in_use=False).order_by('-created').first()
+    template = loader.get_template("core/login.html")
+    context = {
+        "current_job": current_job,
+    }
+    return HttpResponse(template.render(context, request))
