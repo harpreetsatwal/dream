@@ -5,9 +5,9 @@ import datetime
 class Project(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
-    start_date = models.DateTimeField("Date Started", default=datetime.date.today)
-    created = models.DateTimeField("Date Created", default=datetime.date.today)
-    last_updated = models.DateTimeField("Date Last Updated", default=datetime.date.today)
+    start_date = models.DateTimeField("Date Started")
+    created = models.DateTimeField("Date Created")
+    last_updated = models.DateTimeField("Date Last Updated")
     total_jobs = models.IntegerField(default=0,blank=True)
     jobs_done = models.IntegerField(default=0, blank=True)
 
